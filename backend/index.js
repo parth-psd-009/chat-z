@@ -6,14 +6,6 @@ const io = require("./socket");
 const app = express();
 const server = http.createServer(app);
 
-mongoose.connect(
-    "mongodb+srv://parthsarathidixit:PTwgqgFfGCi5QVfB@cluster0.ccqo3bf.mongodb.net/?retryWrites=true&w=majority",
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    }
-);
-
 app.use(express.json());
 
 io.on("connection", (socket) => {
